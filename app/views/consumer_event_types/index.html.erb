@@ -1,0 +1,27 @@
+<h1>Listing consumer_event_types</h1>
+
+<table>
+  <tr>
+    <th>Consumer</th>
+    <th>Event type</th>
+    <th>Interest level</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @consumer_event_types.each do |consumer_event_type| %>
+  <tr>
+    <td><%= consumer_event_type.consumer_id %></td>
+    <td><%= consumer_event_type.event_type_id %></td>
+    <td><%= consumer_event_type.interest_level %></td>
+    <td><%= link_to 'Show', consumer_event_type %></td>
+    <td><%= link_to 'Edit', edit_consumer_event_type_path(consumer_event_type) %></td>
+    <td><%= link_to 'Destroy', consumer_event_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Consumer event type', new_consumer_event_type_path %>

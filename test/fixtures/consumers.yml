@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  zip_code: MyString
+  user_id: 1
+  loyalty_score: 1
+
+two:
+  zip_code: MyString
+  user_id: 1
+  loyalty_score: 1

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Voucher:</b>
+  <%= @voucher_offer.voucher_id %>
+</p>
+
+<p>
+  <b>Business:</b>
+  <%= @voucher_offer.business_id %>
+</p>
+
+<p>
+  <b>Consumer:</b>
+  <%= @voucher_offer.consumer_id %>
+</p>
+
+<p>
+  <b>Accepted:</b>
+  <%= @voucher_offer.accepted %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @voucher_offer.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_voucher_offer_path(@voucher_offer) %> |
+<%= link_to 'Back', voucher_offers_path %>

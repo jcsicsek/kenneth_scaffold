@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  business_id: 1
+  event_type_id: 1
+  title: MyString
+  description: MyString
+  event_time: 2011-04-13 21:13:04
+  offer_lifespan_minutes: 1
+  max_offers: 1
+  voucher_price_cents: 1
+  full_value_cents: 1
+  active: false
+
+two:
+  business_id: 1
+  event_type_id: 1
+  title: MyString
+  description: MyString
+  event_time: 2011-04-13 21:13:04
+  offer_lifespan_minutes: 1
+  max_offers: 1
+  voucher_price_cents: 1
+  full_value_cents: 1
+  active: false

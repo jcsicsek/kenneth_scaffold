@@ -1,0 +1,57 @@
+<%= form_for(@voucher) do |f| %>
+  <% if @voucher.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@voucher.errors.count, "error") %> prohibited this voucher from being saved:</h2>
+
+      <ul>
+      <% @voucher.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :business_id %><br />
+    <%= f.text_field :business_id %>
+  </div>
+  <div class="field">
+    <%= f.label :event_type_id %><br />
+    <%= f.text_field :event_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :event_time %><br />
+    <%= f.datetime_select :event_time %>
+  </div>
+  <div class="field">
+    <%= f.label :offer_lifespan_minutes %><br />
+    <%= f.text_field :offer_lifespan_minutes %>
+  </div>
+  <div class="field">
+    <%= f.label :max_offers %><br />
+    <%= f.text_field :max_offers %>
+  </div>
+  <div class="field">
+    <%= f.label :voucher_price_cents %><br />
+    <%= f.text_field :voucher_price_cents %>
+  </div>
+  <div class="field">
+    <%= f.label :full_value_cents %><br />
+    <%= f.text_field :full_value_cents %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

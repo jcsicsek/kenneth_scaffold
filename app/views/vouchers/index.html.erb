@@ -1,0 +1,41 @@
+<h1>Listing vouchers</h1>
+
+<table>
+  <tr>
+    <th>Business</th>
+    <th>Event type</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Event time</th>
+    <th>Offer lifespan minutes</th>
+    <th>Max offers</th>
+    <th>Voucher price cents</th>
+    <th>Full value cents</th>
+    <th>Active</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vouchers.each do |voucher| %>
+  <tr>
+    <td><%= voucher.business_id %></td>
+    <td><%= voucher.event_type_id %></td>
+    <td><%= voucher.title %></td>
+    <td><%= voucher.description %></td>
+    <td><%= voucher.event_time %></td>
+    <td><%= voucher.offer_lifespan_minutes %></td>
+    <td><%= voucher.max_offers %></td>
+    <td><%= voucher.voucher_price_cents %></td>
+    <td><%= voucher.full_value_cents %></td>
+    <td><%= voucher.active %></td>
+    <td><%= link_to 'Show', voucher %></td>
+    <td><%= link_to 'Edit', edit_voucher_path(voucher) %></td>
+    <td><%= link_to 'Destroy', voucher, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Voucher', new_voucher_path %>

@@ -1,0 +1,37 @@
+<%= form_for(@voucher_offer) do |f| %>
+  <% if @voucher_offer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@voucher_offer.errors.count, "error") %> prohibited this voucher_offer from being saved:</h2>
+
+      <ul>
+      <% @voucher_offer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :voucher_id %><br />
+    <%= f.text_field :voucher_id %>
+  </div>
+  <div class="field">
+    <%= f.label :business_id %><br />
+    <%= f.text_field :business_id %>
+  </div>
+  <div class="field">
+    <%= f.label :consumer_id %><br />
+    <%= f.text_field :consumer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :accepted %><br />
+    <%= f.check_box :accepted %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

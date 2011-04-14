@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Consumer:</b>
+  <%= @consumer_event_type.consumer_id %>
+</p>
+
+<p>
+  <b>Event type:</b>
+  <%= @consumer_event_type.event_type_id %>
+</p>
+
+<p>
+  <b>Interest level:</b>
+  <%= @consumer_event_type.interest_level %>
+</p>
+
+
+<%= link_to 'Edit', edit_consumer_event_type_path(@consumer_event_type) %> |
+<%= link_to 'Back', consumer_event_types_path %>

@@ -1,0 +1,31 @@
+<h1>Listing voucher_offers</h1>
+
+<table>
+  <tr>
+    <th>Voucher</th>
+    <th>Business</th>
+    <th>Consumer</th>
+    <th>Accepted</th>
+    <th>Active</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @voucher_offers.each do |voucher_offer| %>
+  <tr>
+    <td><%= voucher_offer.voucher_id %></td>
+    <td><%= voucher_offer.business_id %></td>
+    <td><%= voucher_offer.consumer_id %></td>
+    <td><%= voucher_offer.accepted %></td>
+    <td><%= voucher_offer.active %></td>
+    <td><%= link_to 'Show', voucher_offer %></td>
+    <td><%= link_to 'Edit', edit_voucher_offer_path(voucher_offer) %></td>
+    <td><%= link_to 'Destroy', voucher_offer, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Voucher offer', new_voucher_offer_path %>
