@@ -50,7 +50,7 @@
 <% @business.vouchers.each do |voucher| %>
   <tr>
     <td><b><%= voucher.title %></b></td>
-    <td><%= EventType.find(voucher.event_type_id).label %></td>
+    <td><%= @event_types[voucher.event_type_id].label %></td>
     <td><%= voucher.description %></td>
     <td><%= voucher.event_time %></td>
     <td><%= voucher.offer_lifespan_minutes %></td>

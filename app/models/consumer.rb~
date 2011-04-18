@@ -3,5 +3,5 @@ class Consumer < ActiveRecord::Base
   has_many :voucher_offers
   has_many :consumer_event_types
   
-  #attr_accessible :zip_code, :loyalty_score
+  attr_accessible :zip_code, :loyalty_score
 end

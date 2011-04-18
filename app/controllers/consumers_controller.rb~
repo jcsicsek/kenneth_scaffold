@@ -14,7 +14,6 @@ class ConsumersController < ApplicationController
   # GET /consumers/1.xml
   def show
     @consumer = Consumer.find(params[:id])
-    @vouchers = Voucher.all
 
     respond_to do |format|
       format.html # show.html.erb

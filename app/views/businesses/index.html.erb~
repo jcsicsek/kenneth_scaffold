@@ -2,7 +2,6 @@
 
 <table>
   <tr>
-    <th>Id</th>
     <th>User</th>
     <th>Name</th>
     <th>Description</th>
@@ -17,7 +16,6 @@
 
 <% @businesses.each do |business| %>
   <tr>
-    <td><%= business.id %></td>
     <td><%= business.user_id %></td>
     <td><%= business.name %></td>
     <td><%= business.description %></td>

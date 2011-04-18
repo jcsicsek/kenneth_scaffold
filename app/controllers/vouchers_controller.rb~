@@ -50,7 +50,7 @@ class VouchersController < ApplicationController
       if @voucher.save
 	@consumers.each do |consumer|
 	  if consumer.zip_code == @voucher.business.zip_code && consumer.consumer_event_types.find(@voucher.event_type_id).interest_level > 0
-	    @subject = "You have received an offer for $" + (@voucher.voucher_price_cents / 100).to_s + " " + EventType.find(@voucher.event_type_id).label + " from " + @voucher.business.name + "!"
+	    @subject = "You have received an offer for $" + @voucher.voucher_price_cents / 100 + " " + EventType.find(@voucher.event_type_id).label + " from " + @voucher.business.name + "!"
 	    @message = "Test"
 	    Emailer.deliver_contact(consumer.user.email, @subject, @message)
 	    @voucher_offer = VoucherOffer.new

@@ -46,6 +46,9 @@
     <td><%= Voucher.find(voucher_offer.voucher_id).voucher_price_cents %></td>
     <td><%= Voucher.find(voucher_offer.voucher_id).full_value_cents %></td>
     <td><%= Voucher.find(voucher_offer.voucher_id).active %></td>
+    <td><%= link_to 'Show', voucher %></td>
+    <td><%= link_to 'Edit', edit_voucher_path(voucher) %></td>
+    <td><%= link_to 'Destroy', voucher, :confirm => 'Are you sure?', :method => :delete %></td>
 
   </tr>
 <% end %>
