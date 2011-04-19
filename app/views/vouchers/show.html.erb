@@ -1,59 +1,66 @@
-<p id="notice"><%= notice %></p>
+ <div id="main">
+    <div class="page_margins">
+      <div class="page"> 
 
-<p>
-  <b>Business:</b>
-  <%= @voucher.business_id %>
-</p>
-
-<p>
-  <b>Event type:</b>
-  <%= @voucher.event_type_id %>
-</p>
-
-<p>
-  <b>Title:</b>
-  <%= @voucher.title %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @voucher.description %>
-</p>
-
-<p>
-  <b>Event time:</b>
-  <%= @voucher.event_time %>
-</p>
-
-<p>
-  <b>Offer lifespan minutes:</b>
-  <%= @voucher.offer_lifespan_minutes %>
-</p>
-
-<p>
-  <b>Max offers:</b>
-  <%= @voucher.max_offers %>
-</p>
-
-<p>
-  <b>Voucher price cents:</b>
-  <%= @voucher.voucher_price_cents %>
-</p>
-
-<p>
-  <b>Full value cents:</b>
-  <%= @voucher.full_value_cents %>
-</p>
-
-<p>
-  <b>Active:</b>
-  <%= @voucher.active %>
-</p>
-
-
-<%= link_to 'Edit', edit_voucher_path(@voucher), :class => "button round2" %>
-<%= link_to 'Back', vouchers_path, :class => "button round2" %>
-
-<br />
-<br />
-<br />
+            <p id="notice"><%= notice %></p>
+            
+            <p>
+              <b>Business:</b>
+              <%= @voucher.business_id %>
+            </p>
+            
+            <p>
+              <b>Event type:</b>
+              <%= @voucher.event_type_id %>
+            </p>
+            
+            <p>
+              <b>Title:</b>
+              <%= @voucher.title %>
+            </p>
+            
+            <p>
+              <b>Description:</b>
+              <%= @voucher.description %>
+            </p>
+            
+            <p>
+              <b>Event time:</b>
+              <%= @voucher.event_time %>
+            </p>
+            
+            <p>
+              <b>Offer lifespan minutes:</b>
+              <%= @voucher.offer_lifespan_minutes %>
+            </p>
+            
+            <p>
+              <b>Max offers:</b>
+              <%= @voucher.max_offers %>
+            </p>
+            
+            <p>
+              <b>Voucher price cents:</b>
+              <%= @voucher.voucher_price_cents %>
+            </p>
+            
+            <p>
+              <b>Full value cents:</b>
+              <%= @voucher.full_value_cents %>
+            </p>
+            
+            <p>
+              <b>Active:</b>
+              <%= @voucher.active %>
+            </p>
+            
+            
+            <%= link_to 'Edit', edit_voucher_path(@voucher), :class => "button round2" %>
+            <%= link_to 'Back', vouchers_path, :class => "button round2" %>
+            
+            <br />
+            <br />
+            <br />
+      </div>
+    </div>
+ </div>

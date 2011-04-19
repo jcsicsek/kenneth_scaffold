@@ -16,7 +16,9 @@ KennethScaffold::Application.routes.draw do
   
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
-  match '/help',    :to => 'pages#help'
+  match '/faq',    :to => 'pages#faq'
+  match '/learn',    :to => 'pages#learn'
+  match '/contact',    :to => 'pages#contact.html'
 
   root :to => 'pages#home'
 

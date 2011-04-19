@@ -1,0 +1,52 @@
+<footer>
+  <div id="footer" role="contentinfo">
+    <div class="page_margins">
+      <div class="page">
+	    <div class="subcolumns equalize">
+          <div class="c25l">
+            <div class="subcl">
+                <h5>Company</h5>
+                    <ul>
+                      <a href="#"><li>Home</li></a>
+                      <a href="#"><li>About</li></a>
+                      <a href="#"><li>Contact</li></a>
+                      <a href="#"><li>Jobs@UsherBuddy</li></a>				  
+                      <a href="#"><li>Press</li></a>
+                      <a href="#"><li>Legal</li></a>					  
+                      <a href="#"><li>Privacy Policy</li></a>
+                    </ul>
+            </div>
+          </div>
+          <div class="c25l">
+            <div class="subcl">
+                <h5>Learn More</h5>
+                    <ul>
+                      <a href="#"><li>FAQs</li></a>
+                      <a href="#"><li>Suggest a Business</li></a>
+                      <a href="#"><li>Business Signup</li></a>
+                    </ul>
+            </div>
+          </div>
+		  <div class="c25l">
+            <div class="subcl">
+               <h5>More UsherBuddy</h5>
+                    <ul>
+                      <a href="#"><li>UsherBuddy Blog</li></a>
+                      <a href="#"><li>UsherBuddy Mobile</li></a>
+                      <a href="#"><li>UsherBuddy Street Shots</li></a>
+					  <a href="#"><li>Meet the Merchants</li></a>
+                    </ul>
+            </div>
+          </div>
+          <div class="c25l">
+            <div class="subcr">
+              <h5>Copyright Info</h5>
+				<p>Usher Buddy is an easy way to go to venues in your city for a huge discount. We have 1000's of deals that you can receive on any given night!</p>
+				<p>© 2011 Usher Buddy, Inc. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

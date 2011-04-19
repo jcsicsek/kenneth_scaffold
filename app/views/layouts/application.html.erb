@@ -1,18 +1,43 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
   <head>
-    <title>KennethScaffold</title>
+    <title>UsherBuddy | No Seat Left Behind</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
     <%= csrf_meta_tag %>
     <%= render 'layouts/stylesheets' %>
-    <%= javascript_include_tag :defaults %>
+    <%= javascript_include_tag :all %>
+    <script>
+		$(document).ready(function(){
+			$(".contactbox").colorbox({transition:"none",width:"700px", height:"550px"});
+			$(".youtube").colorbox({iframe:true, innerWidth:425, innerHeight:344});
+		});
+    </script>
+	
+    <script>
+		$(document).ready(function(){
+			$.ajax({
+				type: "GET",
+				url: "/dropdown.xml",
+				dataType: "xml",
+				success: function(xml) {
+					var select = $('#preferred_city');
+					$(xml).find('menuitem').each(function(){
+						var title = $(this).find('title').text();
+						select.append("<option/><option class='ddheader'>"+title+"</option>");
+						$(this).find('value').each(function(){
+							var value = $(this).text();
+							select.append("<option class='ddindent' value='"+ value +"'>"+value+"</option>");
+						});
+					});
+					select.children(":first").text("Please Choose Your City").attr("selected",true);
+				}
+			});
+		});
+    </script>
   </head>
   <body>
-    <div class="container">
-      <%= render 'layouts/header' %>
-      <section class="round">
-        <%= yield %>
-      </section>
-      <%= render 'layouts/footer' %>
-    </div>
+    <%= render 'layouts/header' %>
+    <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

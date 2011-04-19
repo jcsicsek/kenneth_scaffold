@@ -1,12 +1,91 @@
 <header>
-  <%= link_to logo, root_path %>
-  <nav class="round">
-    <ul>
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "About", about_path %></li>
-      <li><%= link_to "Help", help_path %></li>      
-      <li><%= link_to "Contact", contact_path %></li>
+  
+<div id="toppanel">
+	<div id="panel">
+		<div class="content clearfix">
+			<div class="left">
+				<h1>Welcome to UsherBuddy</h1>
+				<h2>The best deals your city has to offer.</h2>		
+				<p class="grey">UsherBuddy allows all of the best events in your city to offer steep discounts on tickets, menu items, or cover charges... as long as you are willing to act on the deal in a timely manner!</p>
+				<h2>Timely... Manner?</h2>
+				<p class="grey">Yup, that's right. Some deals will give you a week window to act on them. Some a few days. And some possibly as low as an hour or two!</p>
+			</div>
+			<div class="left">
+				<!-- Login Form -->
+				<form class="clearfix" action="#" method="post">
+					<h1>Member Login</h1>
+					<label class="grey" for="log">Username:</label>
+					<input class="field" type="text" name="log" id="log" value="" size="23" />
+					<label class="grey" for="pwd">Password:</label>
+					<input class="field" type="password" name="pwd" id="pwd" size="23" />
+	            	<label><input name="rememberme" id="rememberme" type="checkbox" checked="checked" value="forever" /> &nbsp;Remember me</label>
+        			<div class="clear"></div>
+					<input type="submit" name="submit" value="Login" class="bt_login" />
+					<a class="lost-pwd" href="#">Lost your password?</a>
+				</form>
+			</div>
+			<div class="left right">			
+				<!-- Register Form -->
+				<form action="#" method="post">
+					<h1>Not a member yet? Sign Up!</h1>				
+					<label class="grey" for="signup">Username:</label>
+					<input class="field" type="text" name="signup" id="signup" value="" size="23" />
+					<label class="grey" for="email">Email:</label>
+					<input class="field" type="text" name="email" id="email" size="23" />
+					<label class="grey" for="pwd">Password:</label>
+					<input class="field" type="password" name="pwd" id="pwd" size="23" />
+					<input type="submit" name="submit" value="Register" class="bt_register" />
+				</form>
+			</div>
+		</div>
+        </div> <!-- /login -->	
 
-    </ul>
-  </nav>
+	<!-- The tab on top -->	
+	<div class="tab">
+		<ul class="login">
+			<li class="left">&nbsp;</li>
+			<li>Hello Guest!</li>
+			<li class="sep">|</li>
+			<li id="toggle">
+				<a id="open" class="open" href="#">Log In | Register</a>
+				<a id="close" style="display: none;" class="close" href="#">Close Panel</a>			
+			</li>
+			<li class="right">&nbsp;</li>
+		</ul> 
+	</div> <!-- / top -->
+	
+</div> <!--panel -->
+
+  <div id="topnav" role="contentinfo">
+    <div class="page_margins">
+      <div class="page">
+        <a href="/"><img src="/images/logo.png"></img><img src="/images/buddy.png"></img></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="nav" role="navigation">
+    <div class="page_margins">
+      <div class="page">
+        <div class="hlist">
+          <!-- main navigation: #nav_main -->
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/learn">How It Works</a></li>
+            <li><a href="/faq">FAQ</a></li>
+	    <li><a href="/about">About</a></li>
+	    <li><a href="#">Blog</a></li>
+	    <li><a class="contactbox" href="/contact">Contact</a></li>
+          </ul>
+	  <div style="float:right; padding-top: 7px; padding-right: 16px;">
+            <form>
+		<select id="preferred_city"><option>Please choose your city</option> </select>
+            </form>		
+	  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </header>

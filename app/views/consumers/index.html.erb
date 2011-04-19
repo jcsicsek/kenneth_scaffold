@@ -1,31 +1,38 @@
-<h1>Listing consumers</h1>
-
-<table>
-  <tr>
-    <th>Zip code</th>
-    <th>User</th>
-    <th>Loyalty score</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @consumers.each do |consumer| %>
-  <tr>
-    <td><%= consumer.zip_code %></td>
-    <td><%= consumer.user_id %></td>
-    <td><%= consumer.loyalty_score %></td>
-    <td><%= link_to 'Show', consumer %></td>
-    <td><%= link_to 'Edit', edit_consumer_path(consumer) %></td>
-    <td><%= link_to 'Destroy', consumer, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Consumer', new_consumer_path, :class => "button round2" %>
-
-<br />
-<br />
-<br />
+ <div id="main">
+    <div class="page_margins">
+      <div class="page">
+        
+        <h1>Listing consumers</h1>
+        
+        <table>
+          <tr>
+            <th>Zip code</th>
+            <th>User</th>
+            <th>Loyalty score</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        
+        <% @consumers.each do |consumer| %>
+          <tr>
+            <td><%= consumer.zip_code %></td>
+            <td><%= consumer.user_id %></td>
+            <td><%= consumer.loyalty_score %></td>
+            <td><%= link_to 'Show', consumer %></td>
+            <td><%= link_to 'Edit', edit_consumer_path(consumer) %></td>
+            <td><%= link_to 'Destroy', consumer, :confirm => 'Are you sure?', :method => :delete %></td>
+          </tr>
+        <% end %>
+        </table>
+        
+        <br />
+        
+        <%= link_to 'New Consumer', new_consumer_path, :class => "button round2" %>
+        
+        <br />
+        <br />
+        <br />
+      </div>
+    </div>
+ </div>

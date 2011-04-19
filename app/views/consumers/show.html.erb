@@ -1,62 +1,69 @@
-<p id="notice"><%= notice %></p>
+ <div id="main">
+    <div class="page_margins">
+      <div class="page"> 
 
-<h1><%= @consumer.user.name %></h1>
-
-<p>
-  <b>Zip code:</b>
-  <%= @consumer.zip_code %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%= @consumer.user_id %>
-</p>
-
-<p>
-  <b>Loyalty score:</b>
-  <%= @consumer.loyalty_score %>
-</p>
-
-<h1>Vouchers</h1>
-
-<table>
-  <tr>
-    <th></th>
-    <th>Event type</th>
-    <th>Description</th>
-    <th>Event time</th>
-    <th>Offer lifespan minutes</th>
-    <th>Max offers</th>
-    <th>Voucher price cents</th>
-    <th>Full value cents</th>
-    <th>Active</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @consumer.voucher_offers.each do |voucher_offer| %>
-  <tr>
-    <td><b><%= Voucher.find(voucher_offer.voucher_id).title %></b></td>
-    <td><%= EventType.find(Voucher.find(voucher_offer.voucher_id).event_type_id).label %></td>
-    <td><%= Voucher.find(voucher_offer.voucher_id).description %></td>
-    <td><%= Voucher.find(voucher_offer.voucher_id).event_time %></td>
-    <td><%= Voucher.find(voucher_offer.voucher_id).offer_lifespan_minutes %></td>
-    <td><%= Voucher.find(voucher_offer.voucher_id).max_offers %></td>
-    <td><%= Voucher.find(voucher_offer.voucher_id).voucher_price_cents %></td>
-    <td><%= Voucher.find(voucher_offer.voucher_id).full_value_cents %></td>
-    <td><%= Voucher.find(voucher_offer.voucher_id).active %></td>
-
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-
-<%= link_to 'Edit', edit_consumer_path(@consumer), :class => "button round2" %> 
-<%= link_to 'Back', consumers_path, :class => "button round2" %>
-
-<br />
-<br />
-<br />
+        <p id="notice"><%= notice %></p>
+        
+        <h1><%= @consumer.user.name %></h1>
+        
+        <p>
+          <b>Zip code:</b>
+          <%= @consumer.zip_code %>
+        </p>
+        
+        <p>
+          <b>User:</b>
+          <%= @consumer.user_id %>
+        </p>
+        
+        <p>
+          <b>Loyalty score:</b>
+          <%= @consumer.loyalty_score %>
+        </p>
+        
+        <h1>Vouchers</h1>
+        
+        <table>
+          <tr>
+            <th></th>
+            <th>Event type</th>
+            <th>Description</th>
+            <th>Event time</th>
+            <th>Offer lifespan minutes</th>
+            <th>Max offers</th>
+            <th>Voucher price cents</th>
+            <th>Full value cents</th>
+            <th>Active</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        
+        <% @consumer.voucher_offers.each do |voucher_offer| %>
+          <tr>
+            <td><b><%= Voucher.find(voucher_offer.voucher_id).title %></b></td>
+            <td><%= EventType.find(Voucher.find(voucher_offer.voucher_id).event_type_id).label %></td>
+            <td><%= Voucher.find(voucher_offer.voucher_id).description %></td>
+            <td><%= Voucher.find(voucher_offer.voucher_id).event_time %></td>
+            <td><%= Voucher.find(voucher_offer.voucher_id).offer_lifespan_minutes %></td>
+            <td><%= Voucher.find(voucher_offer.voucher_id).max_offers %></td>
+            <td><%= Voucher.find(voucher_offer.voucher_id).voucher_price_cents %></td>
+            <td><%= Voucher.find(voucher_offer.voucher_id).full_value_cents %></td>
+            <td><%= Voucher.find(voucher_offer.voucher_id).active %></td>
+        
+          </tr>
+        <% end %>
+        </table>
+        
+        <br />
+        
+        
+        <%= link_to 'Edit', edit_consumer_path(@consumer), :class => "button round2" %> 
+        <%= link_to 'Back', consumers_path, :class => "button round2" %>
+        
+        <br />
+        <br />
+        <br />
+      </div>
+    </div>
+ </div>
