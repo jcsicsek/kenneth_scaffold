@@ -2,11 +2,11 @@
     <div class="page_margins">
       <div class="page"> 
 
-        <h1>New voucher</h1>
+        <h1>New Event Voucher</h1>
         
         <%= render 'form' %>
         
-        <div class="btn btn_back"><%= link_to 'Back', vouchers_path %><span></span></div>
+        <%= link_to 'Back', vouchers_path, :class => "button round2" %>
         
         <br />
         <br />

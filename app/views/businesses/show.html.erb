@@ -69,11 +69,11 @@
               </table>
               
               <br />
-              <%= link_to 'New Voucher', new_voucher_path %>
+              <div class="btn btn_new"><%= link_to 'New Voucher', new_voucher_path %><span></span></div>
               <br />
               
-              <%= link_to 'Edit', edit_business_path(@business), :class => "button round2" %> |
-              <%= link_to 'Back', businesses_path, :class => "button round2" %>
+              <div class="btn btn_edit"><%= link_to 'Edit', edit_business_path(@business) %><span></span></div>
+              <div class="btn btn_back"><%= link_to 'Back', businesses_path %><span></span></div>
               
               <br />
               <br />

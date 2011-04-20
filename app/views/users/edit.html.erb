@@ -1,6 +1,17 @@
-<h1>Editing user</h1>
+ <div id="main">
+    <div class="page_margins">
+      <div class="page">
 
-<%= render 'form' %>
+          <h1>Editing user</h1>
+          
+          <%= render 'form' %>
+          
+          <div class="btn btn_show"><%= link_to 'Show', @user %><span></span></div>
+          <div class="btn btn_back"><%= link_to 'Back', users_path %><span></span></div>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+        <br />
+        <br />
+        <br />
+      </div>
+    </div>
+ </div>

@@ -25,7 +25,7 @@ class VouchersController < ApplicationController
   # GET /vouchers/new.xml
   def new
     @voucher = Voucher.new
-    @voucher.business_id = session[:business_id]
+
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,7 +41,10 @@ class VouchersController < ApplicationController
   # POST /vouchers
   # POST /vouchers.xml
   def create
+    #begin
     @voucher = Voucher.new(params[:voucher])
+    @voucher.business_id = session[:business_id]
+    @voucher.active = true
     @consumers = Consumer.all
     @consumer_event_types = ConsumerEventType.all
     @business = Business.find(session[:business_id])
@@ -68,6 +71,8 @@ class VouchersController < ApplicationController
         format.xml  { render :xml => @voucher.errors, :status => :unprocessable_entity }
       end
     end
+    #rescue Exception
+    #end
   end
 
   # PUT /vouchers/1

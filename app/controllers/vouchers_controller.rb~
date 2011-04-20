@@ -25,7 +25,7 @@ class VouchersController < ApplicationController
   # GET /vouchers/new.xml
   def new
     @voucher = Voucher.new
-    @voucher.business_id = session[:business_id]
+
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,7 +41,10 @@ class VouchersController < ApplicationController
   # POST /vouchers
   # POST /vouchers.xml
   def create
+    begin
     @voucher = Voucher.new(params[:voucher])
+    @voucher.business_id = session[:business_id]
+    @voucher.active = true
     @consumers = Consumer.all
     @consumer_event_types = ConsumerEventType.all
     @business = Business.find(session[:business_id])
@@ -50,7 +53,7 @@ class VouchersController < ApplicationController
       if @voucher.save
 	@consumers.each do |consumer|
 	  if consumer.zip_code == @voucher.business.zip_code && consumer.consumer_event_types.find(@voucher.event_type_id).interest_level > 0
-	    @subject = "You have received an offer for $" + @voucher.voucher_price_cents / 100 + " " + EventType.find(@voucher.event_type_id).label + " from " + @voucher.business.name + "!"
+	    @subject = "You have received an offer for $" + (@voucher.voucher_price_cents / 100).to_s + " " + EventType.find(@voucher.event_type_id).label + " from " + @voucher.business.name + "!"
 	    @message = "Test"
 	    Emailer.deliver_contact(consumer.user.email, @subject, @message)
 	    @voucher_offer = VoucherOffer.new
@@ -67,6 +70,8 @@ class VouchersController < ApplicationController
         format.html { render :action => "new" }
         format.xml  { render :xml => @voucher.errors, :status => :unprocessable_entity }
       end
+    end
+    rescue Exception
     end
   end
 

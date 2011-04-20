@@ -226,4 +226,37 @@
     background-position:0 0.45em;
   }
   */
+  
+.btn {
+	float: left;
+	/*clear: both;*/
+	background: url(/images/btn_left.png) no-repeat;
+	padding: 0 0 0 10px;
+	margin: 35px 10px 0 0;
+}
+.btn a{
+	float: left;
+	height: 40px;
+	background: url(/images/btn_stretch.png) repeat-x left top;
+	line-height: 40px;
+	padding: 0 10px;
+	color: #fff;
+	font-size: 1em;
+	text-decoration: none;
+}
+.btn span {
+	background: url(/images/btn_right.png) no-repeat;
+	float: left;
+	width: 10px;
+	height: 40px;
+}
+  
+.btn_show { background-color: green; }
+.btn_back { background-color: red; }
+.btn_new { background-color: blue; }
+.btn_edit { background-color: orange; }
+
+
+
+
 }
